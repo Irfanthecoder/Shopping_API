@@ -1,0 +1,3 @@
+create table category (name VARCHAR(50), description TEXT, id INT primary key);
+
+create table products (id INT primary key AUTO_INCREMENT, name VARCHAR(50), category_id INT, price INT, description TEXT, slug TEXT, FOREIGN KEY (category_id) REFERENCES category(id));
